@@ -1,0 +1,512 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+    --bg: #080e17;
+    --panel: #101a28;
+    --panel-light: #152235;
+    --gold: #c9a45c;
+    --white: #f4f0e8;
+    --muted: #a9b0bc;
+    --border: rgba(201,164,92,.25);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header {
+    min-height: 86px;
+    padding: 0 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    background: rgba(8,14,23,.96);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo span,
+.section-heading h2 span,
+.hero h1 span {
+    color: var(--gold);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav a {
+    color: var(--muted);
+    font-size: 14px;
+    transition: .3s;
+}
+
+.nav a:hover,
+.text-link:hover {
+    color: var(--gold);
+}
+
+.nav .nav-btn {
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 10px 18px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    color: var(--gold);
+    border: 0;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.hero {
+    min-height: 680px;
+    padding: 100px 6%;
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.eyebrow {
+    color: var(--gold);
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(46px, 6vw, 78px);
+    line-height: 1.12;
+    margin: 25px 0;
+}
+
+.hero-content > p {
+    color: var(--muted);
+    font-size: 17px;
+    max-width: 560px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 24px;
+    border: 1px solid var(--gold);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-gold {
+    background: var(--gold);
+    color: #111721;
+}
+
+.btn-gold:hover {
+    background: #e0bd78;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    color: var(--gold);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: var(--gold);
+    color: #111721;
+}
+
+.hero-card {
+    min-height: 390px;
+    border: 1px solid var(--border);
+    background: radial-gradient(circle at center, #263349, #101722 70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.card-label {
+    color: var(--gold);
+    letter-spacing: 4px;
+    font-size: 11px;
+}
+
+.hero-emblem {
+    width: 130px;
+    height: 130px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font: 80px 'Playfair Display', serif;
+    margin: 35px 0;
+}
+
+.hero-card h2 {
+    font: 34px 'Playfair Display', serif;
+}
+
+.hero-card p {
+    color: var(--muted);
+    margin-top: 15px;
+}
+
+.section {
+    padding: 100px 6%;
+}
+
+.dark-section {
+    background: #0d1623;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.section-heading {
+    margin-bottom: 55px;
+}
+
+.section-heading h2 {
+    font: 600 clamp(35px, 4vw, 52px) 'Playfair Display', serif;
+    line-height: 1.2;
+    margin: 14px 0;
+}
+
+.section-heading > p {
+    color: var(--muted);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+}
+
+.large-text {
+    font: 30px/1.5 'Playfair Display', serif;
+}
+
+.about-grid > div:last-child p {
+    color: var(--muted);
+    margin-bottom: 25px;
+}
+
+.text-link {
+    color: var(--gold);
+    transition: .3s;
+}
+
+.service-grid,
+.project-grid,
+.team-grid,
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.service-card,
+.price-card {
+    padding: 32px;
+    border: 1px solid var(--border);
+    background: var(--panel);
+    transition: .3s;
+}
+
+.service-card:hover,
+.price-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold);
+}
+
+.service-number {
+    color: var(--gold);
+    font-size: 13px;
+}
+
+.service-icon {
+    color: var(--gold);
+    font-size: 35px;
+    margin: 20px 0;
+}
+
+.service-card h3,
+.project-card > h3,
+.team-card h3,
+.price-card h3 {
+    font: 24px 'Playfair Display', serif;
+    margin-bottom: 12px;
+}
+
+.service-card p,
+.project-card p,
+.team-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.project-card {
+    min-width: 0;
+}
+
+.project-art {
+    height: 280px;
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.project-art span {
+    color: var(--gold);
+    letter-spacing: 3px;
+    font-size: 11px;
+}
+
+.project-art h3 {
+    font: 42px 'Playfair Display', serif;
+    margin-top: 22px;
+}
+
+.art-one {
+    background: linear-gradient(145deg, #382b24, #151a23);
+}
+
+.art-two {
+    background: linear-gradient(145deg, #26394a, #131a25);
+}
+
+.art-three {
+    background: linear-gradient(145deg, #3a3426, #161c26);
+}
+
+.team-card {
+    padding: 35px 20px;
+    text-align: center;
+    border: 1px solid var(--border);
+    background: var(--panel);
+}
+
+.team-avatar {
+    width: 95px;
+    height: 95px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: var(--gold);
+    font: 50px 'Playfair Display', serif;
+    margin: 0 auto 25px;
+}
+
+.price-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.price-card .price {
+    color: var(--gold);
+    font: 30px 'Playfair Display', serif;
+    margin: 12px 0;
+}
+
+.price-card ul {
+    list-style: none;
+    margin: 10px 0 30px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.price-card li {
+    margin: 12px 0;
+}
+
+.price-card li::before {
+    content: "✓ ";
+    color: var(--gold);
+}
+
+.price-card .btn {
+    margin-top: auto;
+}
+
+.featured {
+    border-color: var(--gold);
+    background: #172336;
+}
+
+.contact-form {
+    max-width: 760px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 16px;
+    background: #111d2b;
+    border: 1px solid var(--border);
+    color: var(--white);
+    font: inherit;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--gold);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    align-self: flex-start;
+}
+
+.form-note {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.footer {
+    padding: 35px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.footer p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+@media (max-width: 900px) {
+    .nav {
+        gap: 14px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .service-grid,
+    .project-grid,
+    .team-grid,
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .header {
+        min-height: 72px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        padding: 25px 6%;
+        background: #101a28;
+        flex-direction: column;
+        align-items: flex-start;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 75px;
+    }
+
+    .hero-card {
+        min-height: 320px;
+    }
+
+    .about-grid,
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .service-grid,
+    .project-grid,
+    .team-grid,
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 75px 6%;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
